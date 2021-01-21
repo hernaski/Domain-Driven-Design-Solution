@@ -5,7 +5,10 @@ The goal is to show how to build a solution in DDD architecture, the codes are j
 This DDD project is totally directed to the domain, using only interfaces and entities.
 The main difference of this solution is to protect the concrete codes (Application Services, Infrastructure) and to force the presentation layer projects to use only the interfaces and entities.
 
-To protect the projects with the concrete codes, we changed the [.csproj] of the IOC project (it makes the dependency injection). Basically, in the IOC project, it is necessary to insert &lt;PrivateAssets&gt;All&lt;/PrivateAssets&gt; in the references of the other projects.
+# References between projects
+![projects references](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme-diagram-references.png)
+
+To protect the projects with the concrete codes (Application Services, Infrastructure), we changed the [.csproj] of the IOC project (it makes the dependency injection). Basically, in the IOC project, it is necessary to insert &lt;PrivateAssets&gt;All&lt;/PrivateAssets&gt; in the references of the other projects.
 
 	<ItemGroup>
 		<ProjectReference Include="..\MySolution.Domain\MySolution.Domain.csproj">
@@ -21,10 +24,8 @@ To protect the projects with the concrete codes, we changed the [.csproj] of the
 
 In this way, concrete codes cannot be accessed by any project (except IOC). Forcing the use of domain entities and interfaces with dependency injection.
 
-# References between projects
-![projects references](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme-diagram-references.png)
-
 # Solution operation
+This diagram provides an overview of how this solution works at run time:
 ![solution operation](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme-diagram-operation.png)
 
 # Solution open in the browser
