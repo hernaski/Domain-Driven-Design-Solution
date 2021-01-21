@@ -1,0 +1,2 @@
+﻿This folder (_DatabaseExample) is for example purposes.
+Use your database just by changing the ConnectionString in the appsettings.json file.
