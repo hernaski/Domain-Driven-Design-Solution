@@ -27,12 +27,12 @@ In this way, concrete codes cannot be accessed by any project (except IOC). Forc
 # Solution operation
 ![solution operation](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme-diagram-operation.png)
 
-# Solution open in browser
+# Solution open in the browser
 ![webapi](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme-swagger.png)
 
 # This solution architecture is suitable for
 - [x] Angular/React/Vue (replace the *.Web.Api* project or create another to access the api);
-- [x] Microservices (one solution for each service);
+- [x] Monoliths or Microservices (one solution for each service);
 - [x] gRPC services (replace the *.Services* project);
 - [x] Include JWT Authentication (configure Bearer or other);
 - [x] TDD or Unit Tests (add UnitTest project and use only *.Domain* and *.Ioc* projects);
