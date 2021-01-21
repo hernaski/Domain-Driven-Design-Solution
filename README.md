@@ -51,8 +51,8 @@ This diagram provides an overview of how this solution works at run time:
 - [x] Avoid using EFCore outside the infrastructure layer;
 - [x] Always use interfaces (Domain), so you can create a UnitTest project and test it more easily;
 - [x] Avoid *Data Annotations* in your entities, use Fluent API. Use *Annotations* in ViewModels, if necessary;
-- [x] Concentrate the nuget packages on the Domain project, by default the references are shared by other projects and makes it easier to update new versions;
-- [x] Imagine that you are going to delete the Presentation project and build a new Angular project. Always develop so that the other layers are independent of the presentation.
+- [x] Concentrate the nuget packages on the Domain project, by default the references are shared by other projects and makes it easier to update new versions. This is valid for packages used in the *Application Services* and *Infrastructure* layers. Packages used for presentation only shouldn't be in the domain project;
+- [x] Always develop thinking the presentation layer is independent of the other layers. Imagine that you change the presentation layer from React to Angular, your domain, services and infrastructure layers shouldn't be changed due to this.
 
 ## :small_blue_diamond: Tools and frameworks used:
 - Visual Studio 2019 (16.8.4)
