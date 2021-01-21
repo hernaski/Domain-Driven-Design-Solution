@@ -7,16 +7,16 @@ The main difference of this solution is to protect the concrete codes (Applicati
 
 To protect the projects with the concrete codes, we changed the [.csproj] of the IOC project (serves to inject the dependencies).
 
-Basically, it is necessary to insert <PrivateAssets>All</PrivateAssets> in the references of the other projects.
+Basically, it is necessary to insert &lt;PrivateAssets&gt;All&lt;/PrivateAssets&gt; in the references of the other projects.
 
-<ItemGroup>
-	<ProjectReference Include="..\MySolution.Domain\MySolution.Domain.csproj">
-		<PrivateAssets>All</PrivateAssets>
-	</ProjectReference>
-	<ProjectReference Include="..\MySolution.Infrastructure\MySolution.Infrastructure.csproj">
-		<PrivateAssets>All</PrivateAssets>
-	</ProjectReference>
-	<ProjectReference Include="..\MySolution.Services\MySolution.Services.csproj">
-		<PrivateAssets>All</PrivateAssets>
-	</ProjectReference>
-</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MySolution.Domain\MySolution.Domain.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+		<ProjectReference Include="..\MySolution.Infrastructure\MySolution.Infrastructure.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+		<ProjectReference Include="..\MySolution.Services\MySolution.Services.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+	</ItemGroup>
