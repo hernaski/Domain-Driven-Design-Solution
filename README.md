@@ -50,13 +50,13 @@ services.AddScoped<IProductRepository, ProductRepository>();
 ```
 ## :small_blue_diamond: Change the solution your way
 
-You can replace the Web.Api with Web Application or other projects. The important thing is the Services, Infrastructure and Domain layers are independent to receive another presentation layer.
+You can replace the Web.Api with Web Application or other projects. The important thing is that the solution layers (Services, Infrastructure and Domain) remain independent to receive another presentation layer.
 
 ![new projects](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme/diagram-new-projects.png)
 
 ## :small_blue_diamond: Solution operation
 
-This diagram provides an overview of how this solution works at run time `run time diagram`:
+This diagram provides an overview of how this solution works at run time `execution diagram`:
 
 ![solution operation](https://raw.githubusercontent.com/hernaski/Domain-Driven-Design-Solution/master/readme/diagram-operation.png)
 
