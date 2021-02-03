@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace MySolution.Web.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         #region Variables
@@ -26,8 +26,8 @@ namespace MySolution.Web.Api.Controllers
         #endregion
 
         #region Actions
-        [HttpGet]
-        public async Task<IEnumerable<ProductResponse>> GetListAsync()
+        [HttpGet("[action]")]
+        public async Task<IEnumerable<ProductResponse>> ListAsync()
         {
             var products = await _productServices.GetListAsync();
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MySolution.Web.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     public class CategoryController : ControllerBase
     {
         #region Variables
@@ -22,8 +22,8 @@ namespace MySolution.Web.Api.Controllers
         #endregion
 
         #region Actions
-        [HttpGet]
-        public async Task<IEnumerable<Category>> GetListAsync()
+        [HttpGet("[action]")]
+        public async Task<IEnumerable<Category>> ListAsync()
         {
             return await _categoryServices.GetListAsync();
         }
